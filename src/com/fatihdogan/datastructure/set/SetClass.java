@@ -1,9 +1,6 @@
 package com.fatihdogan.datastructure.set;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class SetClass {
 
@@ -24,7 +21,7 @@ public class SetClass {
         setLinked.add("Java");
         setLinked.add("Python");
         setLinked.add("C++");
-        setLinked.add("Javascript");
+        setLinked.add("Math");
         setLinked.add("Php");
 
         // TreeSet
@@ -34,6 +31,13 @@ public class SetClass {
         setTree.add("Javascript");
         setTree.add("Php");
         setTree.add("Php");
+
+
+        Iterator<String> classes = setHash.iterator();
+        System.out.println("**** below print using iterator*****");
+        while (classes.hasNext()) {
+            System.out.println(classes.next());
+        }
 
         System.out.println("HashSet *******************************");
         for (String s: setHash){
@@ -64,12 +68,17 @@ public class SetClass {
         }
 
         System.out.println("*** Fark ********");
+        //casting LinkSet to HasSet
         Set<String> convertedSet = new HashSet<>(setLinked);
 
+        //Remove HashSet from LinkSet
         System.out.println(convertedSet.removeAll(setHash));
         System.out.println(convertedSet);
 
         System.out.println("*** Kesisim *****");
+
+        //
+
         Set<String> convertedSet2 = new HashSet<>(setLinked);
         System.out.println(convertedSet2.retainAll(setHash));
         System.out.println(convertedSet2);

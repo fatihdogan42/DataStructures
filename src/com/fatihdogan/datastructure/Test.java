@@ -6,7 +6,7 @@ public class Test {
     public void Test(){
         List<Integer> arrayList = new ArrayList<>();
         List<Integer> vector = new Vector<>();
-        LinkedList<Integer> linkedList = new LinkedList<>();
+        List<Integer> linkedList = new LinkedList<>();
 
         Set<Integer> hashSet = new HashSet<>();
         Set<Integer> treeSet = new TreeSet<>();
@@ -32,7 +32,7 @@ public class Test {
 
         arrayList.get(5);
         linkedList.get(5);
-        linkedList.peek();
+        //linkedList.peek();
         vector.get(5);
 
         System.out.println(arrayList);
@@ -48,6 +48,7 @@ public class Test {
         System.out.println(hashMap);
         System.out.println(hashtable);
         System.out.println(linkedHashMap);
+
 
         System.out.println("---------------------------------");
         ListIterator iterator = arrayList.listIterator();

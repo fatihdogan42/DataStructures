@@ -9,19 +9,19 @@ public class CompareArrayListNikedList {
     public void Test() {
         ArrayList arrayList = new ArrayList();
         LinkedList linkedList = new LinkedList();
-
-        addValueWithIndex("LinkedList", linkedList);
-        addValueWithIndex("ArrayList", arrayList);
-        System.out.println("**************************************************");
+//
+//        addValueWithIndex("LinkedList", linkedList);
+//        addValueWithIndex("ArrayList", arrayList);
+//        System.out.println("**************************************************");
 
         addValueWithoutIndex("LinkedList", linkedList);
         addValueWithoutIndex("ArrayList", arrayList);
         System.out.println("**************************************************");
-
-        getValue("LinkedList", linkedList);
-        getValue("ArrayList", arrayList);
-        System.out.println("**************************************************");
-
+//
+//        getValue("LinkedList", linkedList);
+//        getValue("ArrayList", arrayList);
+//        System.out.println("**************************************************");
+//
         removeValue("LinkedList", linkedList);
         removeValue("ArrayList", arrayList);
     }
@@ -31,7 +31,7 @@ public class CompareArrayListNikedList {
         // Listin sonuna değer ekleme
         long startTime = System.currentTimeMillis();
 
-        for (int i = 0 ; i< 100000 ; i++) {
+        for (int i = 0 ; i< 1000000 ; i++) {
             list.add(0, i);
         }
 
@@ -44,12 +44,12 @@ public class CompareArrayListNikedList {
         // Liste değer ekleme
         long startTime = System.currentTimeMillis();
 
-        for (int i = 0 ; i< 100000 ; i++) {
+        for (int i = 0 ; i< 10000 ; i++) {
             list.add(i);
         }
 
         long endTime = System.currentTimeMillis();
-        System.out.println(dataType + " ekleme süresi " + (endTime - startTime) + " ms");
+        System.out.println(dataType + " ekleme süresi " + (endTime - startTime) + " ms" + " size:" + list.size());
     }
 
     private void getValue(String dataType, List<Integer> list) {
@@ -68,7 +68,8 @@ public class CompareArrayListNikedList {
 
         long startTime = System.currentTimeMillis();
 
-        for (int i = list.size() -1; i>= 0;  i--) {
+//        for (int i = list.size() -1; i>= 0;  i--) {
+        for (int i = 500 ; i<(list.size()/3);  i++) {
             list.remove(i);
         }
 

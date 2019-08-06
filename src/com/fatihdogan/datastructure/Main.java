@@ -11,22 +11,22 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayListClass arrayList = new ArrayListClass();
-        //arrayList.Test();
+      //  arrayList.Test();
 
         LinkedListClass linkedList = new LinkedListClass();
-        //linkedList.Test();
+       //linkedList.Test();
 
         CompareArrayListNikedList compare = new CompareArrayListNikedList();
-        //compare.Test();
+     //   compare.Test();
 
         SetClass setClass = new SetClass();
-        //setClass.Test();
+//        setClass.Test();
 
         HashMapClass hash = new HashMapClass();
-        //hash.Test();
+     //   hash.Test();
 
         MapClass map = new MapClass();
-       // map.Test();
+      // map.Test();
 
         Test tt = new Test();
         tt.Test();

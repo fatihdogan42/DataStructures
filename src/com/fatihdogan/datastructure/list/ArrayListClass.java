@@ -36,14 +36,40 @@ public class ArrayListClass {
              list1.set(0, "Java Course");
 
              //Remove Item
-             list1.remove(2);
-             list1.remove("Fatih");
-             list1.remove(0);
+             //list1.remove(2);
+            // list1.remove("Fatih");
+            // list1.remove(0);
 
+            // method 1
+             System.out.println("Method 1 using iterator");
              ListIterator<String> ll = list1.listIterator();
              while(ll.hasNext())
                  System.out.println(ll.next());
              System.out.println("-----------------------------------");
+
+
+             //method 2
+             System.out.println("Method 2 direct print");
+             System.out.println(list3);
+             System.out.println("-----------------------------------");
+
+             //method 3
+             System.out.println("Method 3 using for loop");
+
+             for(int i = 0; list1.size()>i;i++ ) {
+                 System.out.println(list1.get(i));
+             }
+             System.out.println("-----------------------------------");
+
+             //method 4
+             System.out.println("Method 4 using for each loop");
+
+             for(String list :list1) {
+                 System.out.println(list);
+             }
+             System.out.println("-----------------------------------");
+
+
          }
          catch (Exception ex) {
              System.out.println(ex.toString());
